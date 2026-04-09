@@ -52,7 +52,7 @@ export const WEDDING_CONFIG = {
     {
       date: 'September 2025',
       title: 'Pertama Bertemu',
-      description: 'Kami bertemu pertama kali saat makan siang istirahat kerja. Senyummu adalah hal pertama yang membuat hatiku bergetar.',
+      description: 'Kami pertama kali bertemu saat makan siang di sela istirahat kerja. Senyummu menjadi hal pertama yang membuat hatiku bergetar.',
       icon: '💫',
     },
     {
