@@ -50,31 +50,31 @@ export const WEDDING_CONFIG = {
   // === CERITA CINTA ===
   loveStory: [
     {
-      date: 'Januari 2020',
+      date: 'September 2025',
       title: 'Pertama Bertemu',
-      description: 'Kami bertemu pertama kali di sebuah acara kampus. Senyummu adalah hal pertama yang membuat hatiku bergetar.',
+      description: 'Kami bertemu pertama kali saat makan siang istirahat kerja. Senyummu adalah hal pertama yang membuat hatiku bergetar.',
       icon: '💫',
     },
     {
-      date: 'Maret 2020',
+      date: 'Oktober 2025',
       title: 'Mulai Dekat',
-      description: 'Dari teman menjadi sahabat, lalu menjadi seseorang yang selalu ada di pikiran. Kita mulai sering berjumpa.',
+      description: 'Dari rekan kerja menjadi sahabat. Berawal dari momen bermain ice skating bersama teman kantor, perlahan berubah menjadi sosok yang selalu hadir di pikiran. Sejak saat itu, kami mulai lebih sering berjumpa.',
       icon: '☕',
     },
     {
-      date: 'Agustus 2020',
+      date: 'November 2025',
       title: 'Jadian',
       description: 'Di bawah langit senja yang indah, aku memberanikan diri untuk mengungkapkan perasaan. Dan jawabanmu adalah "Ya".',
       icon: '💕',
     },
     {
-      date: 'Desember 2025',
+      date: 'April 2026',
       title: 'Lamaran',
-      description: 'Setelah 5 tahun bersama, akhirnya aku berlutut dan bertanya "Maukah kamu menikah denganku?" dengan cincin di tangan.',
+      description: 'Setelah 6 bulan bersama, akhirnya aku berlutut dan bertanya "Maukah kamu menikah denganku?" dengan cincin di tangan.',
       icon: '💍',
     },
     {
-      date: 'Juni 2026',
+      date: 'juli 2026',
       title: 'Menikah',
       description: 'Hari yang kami tunggu-tunggu akhirnya tiba. Kami siap memulai babak baru kehidupan bersama.',
       icon: '🕌',
