@@ -1,7 +1,17 @@
 // ====================================
 // KONFIGURASI UNDANGAN PERNIKAHAN
 // Edit data di bawah ini sesuai kebutuhan
+// Lokasi & koordinat dibaca dari .env (tidak masuk ke GitHub)
 // ====================================
+
+// Baca lokasi dari environment variables
+const EVENT1_LAT   = parseFloat(import.meta.env.VITE_EVENT1_LAT  || '-6.2446')
+const EVENT1_LNG   = parseFloat(import.meta.env.VITE_EVENT1_LNG  || '106.8006')
+const EVENT1_ADDR  = import.meta.env.VITE_EVENT1_ADDRESS || 'Lokasi belum dikonfigurasi'
+
+const EVENT2_LAT   = parseFloat(import.meta.env.VITE_EVENT2_LAT  || '-6.2253')
+const EVENT2_LNG   = parseFloat(import.meta.env.VITE_EVENT2_LNG  || '106.8019')
+const EVENT2_ADDR  = import.meta.env.VITE_EVENT2_ADDRESS || 'Lokasi belum dikonfigurasi'
 
 export const WEDDING_CONFIG = {
   // === PASANGAN ===
@@ -32,18 +42,18 @@ export const WEDDING_CONFIG = {
       date: '04 Juli 2026',
       time: '08:00 - 10:00 WIB',
       venue: 'Dirumah Mempelai Wanita',
-      address: 'Jl. Sisingamangaraja, Kebayoran Baru, Jakarta Selatan',
-      mapCenter: [-6.2446, 106.8006],
-      dresscode: 'Putih & Cream',
+      address: EVENT1_ADDR,
+      mapCenter: [EVENT1_LAT, EVENT1_LNG],
+      dresscode: 'Coklat Mahogani',
     },
     {
       title: 'Resepsi',
       date: '04 Juni 2026',
       time: '11:00 - 17:00 WIB',
       venue: 'Dirumah Mempelai Wanita',
-      address: 'Jl. Asia Afrika, Senayan, Jakarta Selatan',
-      mapCenter: [-6.2253, 106.8019],
-      dresscode: 'Earth Tone / Pastel',
+      address: EVENT2_ADDR,
+      mapCenter: [EVENT2_LAT, EVENT2_LNG],
+      dresscode: 'Coklat Mahogani',
     },
   ],
 
