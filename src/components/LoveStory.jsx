@@ -141,7 +141,7 @@ function CoupleAtMilestone({ index, total, inView }) {
           animate={inView ? { scale: [0, 1.3, 1] } : {}}
           transition={{ delay: 0.7, duration: 0.6 }}
         >
-          💕
+          🤍
         </motion.div>
       )}
 
@@ -297,8 +297,8 @@ export default function LoveStory() {
               background: i % 3 === 0
                 ? 'rgba(201,169,110,0.04)'
                 : i % 3 === 1
-                ? 'rgba(168,181,162,0.05)'
-                : 'rgba(201,169,166,0.04)',
+                  ? 'rgba(168,181,162,0.05)'
+                  : 'rgba(201,169,166,0.04)',
             }}
             animate={{ scale: [1, 1.1, 1], rotate: [0, 10, 0] }}
             transition={{ duration: 8 + i * 2, repeat: Infinity, ease: 'easeInOut' }}
@@ -334,7 +334,7 @@ export default function LoveStory() {
               animate={{ scale: [1, 1.3, 1] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >
-              💕
+              ♡
             </motion.div>
             <motion.div
               animate={{ rotate: [5, -5, 5] }}
@@ -417,7 +417,7 @@ export default function LoveStory() {
               animate={{ y: [-4, 0, -4] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >
-              <span className="text-2xl">💕</span>
+              <span className="text-2xl">♡</span>
             </motion.div>
 
             {/* Bride */}

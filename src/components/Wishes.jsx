@@ -50,7 +50,7 @@ export default function Wishes() {
             Ucapan Tamu
           </h2>
           <p className="text-sm" style={{ color: 'var(--color-sage-dark)' }}>
-            Terima kasih atas doa dan ucapan yang telah diberikan 💕
+            Terima kasih atas doa dan ucapan yang telah diberikan ♡
           </p>
         </motion.div>
 
