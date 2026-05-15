@@ -47,7 +47,7 @@ export const WEDDING_CONFIG = {
     },
     {
       title: 'Resepsi',
-      date: '04 Juni 2026',
+      date: '04 Juli 2026',
       time: '11:00 - 17:00 WIB',
       venue: 'Kediaman Mempelai Wanita',
       address: EVENT2_ADDR,
@@ -90,7 +90,7 @@ export const WEDDING_CONFIG = {
     {
       date: 'Juli 2026',
       title: 'Menikah',
-      description: 'Waktu menguatkan setiap langkah yang telah kami pilih. Kini, kami menantikan hari bahagia di bulan Juni 2026, saat dua perjalanan hidup dipersatukan dalam ikatan suci menuju masa depan bersama.',
+      description: 'Waktu menguatkan setiap langkah yang telah kami pilih. Kini, kami menantikan hari bahagia di bulan Juli 2026, saat dua perjalanan hidup dipersatukan dalam ikatan suci menuju masa depan bersama.',
       icon: '🕌',
     },
   ],

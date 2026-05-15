@@ -3,8 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { WEDDING_CONFIG } from '../lib/constants'
 import { useCountdown } from '../hooks/useCountdown'
 
+// URL gambar pasangan sebagai background cover
+// Option 1 — file lokal: letakkan di public/couple.png → isi '/couple.png'
+// Option 2 — Supabase Storage: isi URL lengkap dari Supabase
+const COUPLE_IMAGE_URL = import.meta.env.VITE_COUPLE_IMAGE_URL || null
+
 /**
- * Halaman pembuka undangan dengan efek buka amplop
+ * Halaman pembuka undangan
+ * Background menggunakan foto pasangan (PNG transparan) jika VITE_COUPLE_IMAGE_URL diisi
  */
 export default function Cover({ onOpen }) {
   const [isOpening, setIsOpening] = useState(false)
@@ -13,12 +19,9 @@ export default function Cover({ onOpen }) {
 
   const handleOpen = useCallback(() => {
     setIsOpening(true)
-    setTimeout(() => {
-      onOpen?.()
-    }, 800)
+    setTimeout(() => { onOpen?.() }, 800)
   }, [onOpen])
 
-  // Ambil nama tamu dari URL query param
   const params = new URLSearchParams(window.location.search)
   const guestName = params.get('to') || 'Tamu Undangan'
 
@@ -31,17 +34,50 @@ export default function Cover({ onOpen }) {
           exit={{ opacity: 0, scale: 1.1 }}
           transition={{ duration: 0.8, ease: 'easeInOut' }}
         >
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 25px 25px, #8B6F5C 1px, transparent 1px)`,
-              backgroundSize: '50px 50px',
-            }} />
-          </div>
 
-          {/* Envelope Card */}
+          {/* ===== BACKGROUND: FOTO PASANGAN FULL SCREEN ===== */}
+          {COUPLE_IMAGE_URL ? (
+            <motion.div
+              className="absolute inset-0 z-0"
+              initial={{ opacity: 0, scale: 1.06 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.8, ease: 'easeOut' }}
+            >
+              {/* Foto pasangan sebagai background */}
+              <img
+                src={COUPLE_IMAGE_URL}
+                alt=""
+                aria-hidden="true"
+                className="w-full h-full object-cover object-center"
+                style={{ opacity: 0.38 }}
+              />
+              {/* Overlay cream lembut agar card tetap terbaca */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  background: [
+                    'linear-gradient(135deg,',
+                    '  rgba(253,246,236,0.5) 0%,',
+                    '  rgba(245,230,211,0.35) 50%,',
+                    '  rgba(232,213,196,0.5) 100%)',
+                  ].join(''),
+                }}
+              />
+            </motion.div>
+          ) : (
+            /* Dekoratif polka dot jika tidak ada foto */
+            <div className="absolute inset-0 opacity-5 z-0">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 25px 25px, #8B6F5C 1px, transparent 1px)`,
+                backgroundSize: '50px 50px',
+              }} />
+            </div>
+          )}
+
+          {/* ===== CARD UNDANGAN ===== */}
           <motion.div
             className="relative w-[90vw] max-w-md mx-auto"
+            style={{ zIndex: 2 }}
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: 'easeOut' }}
@@ -184,7 +220,7 @@ export default function Cover({ onOpen }) {
               </motion.button>
             </motion.div>
 
-            {/* Bottom Ornament */}
+            {/* Bottom text */}
             <motion.p
               className="text-center text-xs mt-6 tracking-wider"
               style={{ color: 'var(--color-sage)' }}
