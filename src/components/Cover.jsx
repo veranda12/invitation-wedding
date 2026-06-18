@@ -39,7 +39,7 @@ export default function Cover({ onOpen }) {
           {COUPLE_IMAGE_URL ? (
             <motion.div
               className="absolute inset-0 z-0"
-              initial={{ opacity: 0.5, scale: 1.06 }}
+              initial={{ opacity: 0, scale: 1.06 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.8, ease: 'easeOut' }}
             >
@@ -49,7 +49,7 @@ export default function Cover({ onOpen }) {
                 alt=""
                 aria-hidden="true"
                 className="w-full h-full object-cover object-center"
-                // style={{ opacity: 1 }}
+                style={{ opacity: 1 }}
               />
               {/* Overlay cream lembut agar card tetap terbaca */}
               <div
