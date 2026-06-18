@@ -101,10 +101,10 @@
 
 /* ===== GLASS MORPHISM ===== */
 .glass {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(253, 246, 236, 0.85);
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(253, 246, 236, 0.6);
 }
 
 .glass-dark {
