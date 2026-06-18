@@ -94,7 +94,7 @@ export default function Cover({ onOpen }) {
 
             {/* Main Card */}
             <motion.div
-              className="glass rounded-3xl p-8 md:p-10 text-center shadow-2xl"
+              className="glass-cream rounded-3xl p-8 md:p-10 text-center shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}

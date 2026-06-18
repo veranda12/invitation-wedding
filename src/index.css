@@ -107,6 +107,13 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.glass-cream {
+  background: rgba(253, 246, 236, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(253, 246, 236, 0.6);
+}
+
 .glass-dark {
   background: rgba(60, 60, 60, 0.15);
   backdrop-filter: blur(12px);
