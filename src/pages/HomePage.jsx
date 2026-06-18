@@ -5,7 +5,6 @@ import CoupleSection from '../components/CoupleSection'
 import Countdown from '../components/Countdown'
 import LoveStory from '../components/LoveStory'
 import EventInfo from '../components/EventInfo'
-import Gallery from '../components/Gallery'
 import RsvpForm from '../components/RsvpForm'
 import Wishes from '../components/Wishes'
 import GiftSection from '../components/GiftSection'
@@ -60,11 +59,6 @@ export default function HomePage() {
 
           {/* Informasi Acara + Peta */}
           <EventInfo />
-
-          <OrnamentDivider />
-
-          {/* Galeri */}
-          <Gallery />
 
           <OrnamentDivider />
 

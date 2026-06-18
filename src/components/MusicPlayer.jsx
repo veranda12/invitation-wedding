@@ -34,25 +34,15 @@ export default function MusicPlayer() {
     setIsPlaying(!isPlaying)
   }
 
-  // Autoplay saat pertama kali setelah user interaksi (cover opened)
+  // Autoplay saat komponen di-mount (karena user sudah klik "Buka Undangan")
   useEffect(() => {
-    const handleFirstInteraction = () => {
-      if (audioRef.current && !isPlaying) {
-        audioRef.current.play().then(() => {
-          setIsPlaying(true)
-        }).catch(() => {})
-      }
-      document.removeEventListener('click', handleFirstInteraction)
-    }
-
-    // Delay listener agar tidak langsung dipancu oleh klik "buka undangan"
-    const timer = setTimeout(() => {
-      document.addEventListener('click', handleFirstInteraction)
-    }, 1000)
-
-    return () => {
-      clearTimeout(timer)
-      document.removeEventListener('click', handleFirstInteraction)
+    if (audioRef.current && !isPlaying) {
+      // Browser akan mengizinkan ini karena user baru saja mengklik tombol "Buka Undangan"
+      audioRef.current.play().then(() => {
+        setIsPlaying(true)
+      }).catch((err) => {
+        console.log('Autoplay blocked:', err)
+      })
     }
   }, [])
 
@@ -63,12 +53,14 @@ export default function MusicPlayer() {
       aria-label={isPlaying ? 'Pause music' : 'Play music'}
       title={isPlaying ? 'Pause music' : 'Play music'}
     >
-      <div className="music-bars">
-        <div className="music-bar" style={{ height: '8px' }} />
-        <div className="music-bar" style={{ height: '14px' }} />
-        <div className="music-bar" style={{ height: '6px' }} />
-        <div className="music-bar" style={{ height: '12px' }} />
-      </div>
+      <svg 
+        width="22" height="22" viewBox="0 0 24 24" 
+        fill="none" stroke="var(--color-gold-dark)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+      >
+        <path d="M9 18V5l12-2v13"></path>
+        <circle cx="6" cy="18" r="3"></circle>
+        <circle cx="18" cy="16" r="3"></circle>
+      </svg>
     </button>
   )
 }

@@ -174,28 +174,16 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.music-bars {
-  display: flex;
-  align-items: flex-end;
-  gap: 2px;
-  height: 16px;
+/* Music Icon Animation */
+.music-playing svg {
+  animation: music-rock 2s ease-in-out infinite alternate;
 }
 
-.music-bar {
-  width: 3px;
-  background: var(--color-gold);
-  border-radius: 2px;
-  transition: height 0.3s ease;
+.music-paused svg {
+  opacity: 0.6;
 }
 
-.music-playing .music-bar:nth-child(1) { animation: bar-bounce 0.6s ease-in-out infinite alternate; }
-.music-playing .music-bar:nth-child(2) { animation: bar-bounce 0.6s ease-in-out 0.15s infinite alternate; }
-.music-playing .music-bar:nth-child(3) { animation: bar-bounce 0.6s ease-in-out 0.3s infinite alternate; }
-.music-playing .music-bar:nth-child(4) { animation: bar-bounce 0.6s ease-in-out 0.45s infinite alternate; }
-
-.music-paused .music-bar { height: 4px !important; }
-
-@keyframes bar-bounce {
-  from { height: 4px; }
-  to { height: 16px; }
+@keyframes music-rock {
+  0% { transform: rotate(-15deg) scale(0.9); }
+  100% { transform: rotate(15deg) scale(1.1); }
 }

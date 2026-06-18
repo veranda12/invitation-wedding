@@ -78,7 +78,7 @@ export const WEDDING_CONFIG = {
     {
       date: 'Desember 2025',
       title: 'Menyatakan Keseriusan',
-      description: 'Dengan penuh keyakinan, aku melangkah datang ke rumah, menyampaikan niat tulusku di hadapan keluarganya. Sebuah langkah besar yang menjadi awal dari perjalanan menuju masa depan bersama.',
+      description: 'Dengan penuh keyakinan, langkah menuju rumah tersebut menjadi awal penyampaian niat tulus di hadapan keluarga, sebuah momen besar yang menandai dimulainya perjalanan menuju masa depan bersama.',
       icon: '🤍',
     },
     {
