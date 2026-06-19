@@ -21,7 +21,7 @@ export const WEDDING_CONFIG = {
     father: 'Bapak Doddy Shobri (Alm.)',
     mother: 'Ibu Sri Pamulati',
     childOrder: 'Putra keempat',
-    photo: '',
+    photo: '/mp1.jpeg',
   },
   bride: {
     name: 'Reni Haryani',
@@ -29,7 +29,7 @@ export const WEDDING_CONFIG = {
     father: 'Bapak Dayat (Alm.)',
     mother: 'Ibu Enung',
     childOrder: 'Putri keempat',
-    photo: '',
+    photo: '/mp2.jpeg',
   },
 
   // === TANGGAL & WAKTU ===
