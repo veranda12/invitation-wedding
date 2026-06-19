@@ -109,7 +109,7 @@ export const WEDDING_CONFIG = {
 
   // === REKENING (Gift) ===
   bankAccounts: [
-    { bank: 'Bank BCA', number: '1234567890', name: 'Deni Maulana' },
-    { bank: 'Bank BCA', number: '0987654321', name: 'Reni Haryani' },
+    { bank: 'Bank BCA', number: '6640768027', name: 'Deni Maulana Shobri' },
+    { bank: 'Bank BCA', number: '7381003250', name: 'Reni Haryani' },
   ],
 }
